@@ -41,19 +41,9 @@ Both datasets were accessed on 14.09.2026. Coordinate system: ETRS89 / UTM zone 
 
 ## Method
 
-```mermaid
-flowchart LR
-  A["ALS point cloud (.laz)"] --> B["DTM and DSM, 0.5 m"]
-  C["Building outlines"] --> D["Roof DSM"]
-  B --> D
-  D --> E["Slope and aspect"]
-  E --> F["Facet segmentation"]
-  B --> G["Cast-shadow model"]
-  E --> H["Irradiation per pixel"]
-  G --> H
-  F --> I["Per-facet irradiation, PV potential, suitability"]
-  H --> I
-```
+<p align="center">
+  <img src="images/workflow.png" alt="Workflow of the rooftop solar potential mapping" width="90%">
+</p>
 
 | Step | What happens | Tools |
 |---|---|---|
@@ -94,20 +84,6 @@ Mean irradiation per facet, classified from Low (grey) to Excellent (dark orange
 ├── LICENSE
 └── README.md
 ```
-
-## How to run
-
-1. Install R (4.x) and the packages:
-
-   ```r
-   install.packages(c("lidR", "sf", "terra", "mapview", "ggplot2",
-                      "solrad", "suncalc", "rayshader"))
-   ```
-
-2. Download the data as described in [`data/README.md`](data/README.md) and put it in `data/`.
-3. Open the repository folder as the working directory and run `R/rooftop_solar_potential.R` section by section.
-
-The shadow calculation is the slow part. `shade_fact` at the top of the shadow section sets the shadow grid resolution (`2` = 1 m, quick for testing; use `1` for a final run).
 
 ## Limitations
 
