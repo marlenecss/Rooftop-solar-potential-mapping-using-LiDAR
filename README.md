@@ -1,0 +1,1 @@
+# Rooftop-solar-potential-mapping-using-LiDAR
