@@ -1,0 +1,17 @@
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Data and generated outputs (too large / not redistributable here) -- see data/README.md
+data/*
+!data/README.md
+*.laz
+*.las
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.RData
