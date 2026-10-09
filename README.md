@@ -72,18 +72,6 @@ Mean irradiation per facet, classified from Low (grey) to Excellent (dark orange
 
 ![Per-facet solar suitability](images/suitability_per_facet.png)
 
-## Repository structure
-
-```
-.
-├── R/
-│   └── rooftop_solar_potential.R   # full pipeline, from .laz to maps and 3D views
-├── data/
-│   └── README.md                   # where to download the input data (data itself is not tracked)
-├── images/                         # figures used in this README
-├── LICENSE
-└── README.md
-```
 
 ## Limitations
 
@@ -105,7 +93,3 @@ Mean irradiation per facet, classified from Low (grey) to Excellent (dark orange
 ## Data attribution
 
 Contains data from the Bayerische Vermessungsverwaltung ([geodaten.bayern.de](https://geodaten.bayern.de)), provided as open data under CC BY 4.0. Check the licence terms on the portal before reusing the data.
-
-## License
-
-Code: [MIT](LICENSE).
